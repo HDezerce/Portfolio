@@ -84,6 +84,7 @@
       background-color: #000;
       color: #fff;
       text-align: center;
+      margin-top: 100px;
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -97,117 +98,116 @@
 </head>
 
 <body>
-  <header>
-  </header>
   <nav>
-      <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-      </div>
-      <ul class="nav-links">
-          <li><a class="animate__animated animate__fadeInUp" href="index.html">Accueil</a></li>
-          <li><a class="animate__animated animate__fadeInUp" href="profil.html">Profil</a></li>
-          <li><a class="animate__animated animate__fadeInUp" href="Parcours.html">BTS SIO</a></li>
-          <li><a class="animate__animated animate__fadeInUp" href="#">Tableau de compétences</a></li>
-          <li><a class="animate__animated animate__fadeInUp" href="#">Veille Technologique</a></li>
-      </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-links">
+      <li><a class="animate__animated animate__fadeInUp" href="index.html">Accueil</a></li>
+      <li><a class="animate__animated animate__fadeInUp" href="profil.html">Profil</a></li>
+      <li><a class="animate__animated animate__fadeInUp" href="Parcours.html">Parcours</a></li>
+      <li><a class="animate__animated animate__fadeInUp" href="veille.html">Veille informationnelle</a></li>
+      <li><a class="animate__animated animate__fadeInUp" href="réalisations.html">Projets</a></li>
+    </ul>
   </nav>
 
   <style>
-      nav {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem;
-          background-color: #000;
-      }
+    nav {
+      display: flex;
+      text-align: left;
+      flex-direction: column;
+      /* Modifier la direction de la navbar */
+      justify-content: flex-end;
+      align-items: flex-start;
+      /* Modifier l'alignement de la navbar */
+      padding: 1rem;
+      background-color: #000;
+    }
 
-      .burger {
-          cursor: pointer;
-      }
+    .burger {
+      cursor: pointer;
+    }
 
-      .line1,
-      .line2,
-      .line3 {
-          width: 25px;
-          height: 3px;
-          background-color: #fff;
-          margin: 5px;
-      }
+    .line1,
+    .line2,
+    .line3 {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px;
+    }
 
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      /* Modifier l'alignement des éléments de la navbar */
+      position: absolute;
+      top: 65px;
+      left: 0;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.5s ease;
+      list-style: none;
+      /* Supprimer les petits points avant chaque section */
+      padding: 0;
+    }
+
+    .nav-links li {
+      background-color: #000;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      padding: 1rem;
+      transition: opacity 0.5s ease;
+      font-size: medium;
+    }
+
+    .nav-active {
+      height: 100%;
+    }
+
+    .nav-active li {
+      opacity: 1;
+    }
+
+    .nav-active li a {
+      opacity: 1;
+    }
+
+    @media screen and (min-width: 1024px) {
       .nav-links {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          top: 65px;
-          left: 0;
-          width: 100%;
-          height: 0;
-          overflow: hidden;
-          transition: height 0.5s ease;
+        position: relative;
+        top: 0;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-end;
       }
 
       .nav-links li {
-          background-color: #000;
+        opacity: 1;
+        margin: 0 1rem;
       }
 
-      .nav-links li a {
-          font-size: 1.5rem;
-          text-transform: uppercase;
-          text-decoration: none;
-          color: #fff;
-
-          padding: 1rem;
-          transition: opacity 0.5s ease;
+      .burger {
+        display: none;
       }
-
-      .nav-active {
-          height: 100%;
-      }
-
-      .nav-active li {
-          opacity: 1;
-      }
-
-
-
-      .nav-active li a {
-          opacity: 1;
-      }
-
-      @media screen and (min-width: 1024px) {
-          .nav-links {
-              position: relative;
-              top: 0;
-              height: auto;
-              flex-direction: row;
-              justify-content: flex-end;
-
-          }
-
-          .nav-links li {
-              opacity: 1;
-              margin: 0 1rem;
-          }
-
-          .burger {
-              display: none;
-
-          }
-
-
-      }
+    }
   </style>
   <script>
-      const burger = document.querySelector('.burger');
-      const navLinks = document.querySelector('.nav-links');
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
 
-      burger.addEventListener('click', () => {
-          navLinks.classList.toggle('nav-active');
-      });
+    burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
   </script>
   <main>
     <div class="container">
@@ -217,13 +217,6 @@
       <a href="profil.html" class="btn-en-savoir-plus ">En savoir plus</a>
     </div>
   </main>
-  <footer>
-    <div class="container">
-      <p>Copyright © 2023
-        <a href="https://monsite.com">Portfollio H.Dezerce</a>. Tous droits réservés.
-      </p>
-    </div>
-  </footer>
 </body>
 
 </html>

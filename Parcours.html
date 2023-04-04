@@ -145,8 +145,6 @@
 </head>
 
 <body>
-    <header>
-    </header>
     <nav>
         <div class="burger">
             <div class="line1"></div>
@@ -156,17 +154,21 @@
         <ul class="nav-links">
             <li><a class="animate__animated animate__fadeInUp" href="index.html">Accueil</a></li>
             <li><a class="animate__animated animate__fadeInUp" href="profil.html">Profil</a></li>
-            <li><a class="animate__animated animate__fadeInUp" href="Parcours.html">BTS SIO</a></li>
-            <li><a class="animate__animated animate__fadeInUp" href="#">Tableau de compétences</a></li>
-            <li><a class="animate__animated animate__fadeInUp" href="#">Veille Technologique</a></li>
+            <li><a class="animate__animated animate__fadeInUp" href="Parcours.html">Parcours</a></li>
+            <li><a class="animate__animated animate__fadeInUp" href="veille.html">Veille informationnelle</a></li>
+            <li><a class="animate__animated animate__fadeInUp" href="réalisations.html">Projets</a></li>
         </ul>
     </nav>
 
     <style>
         nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: left;
+            flex-direction: column;
+            /* Modifier la direction de la navbar */
+            justify-content: flex-end;
+            align-items: flex-start;
+            /* Modifier l'alignement de la navbar */
             padding: 1rem;
             background-color: #000;
         }
@@ -187,29 +189,32 @@
         .nav-links {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            /* Modifier l'alignement des éléments de la navbar */
             position: absolute;
             top: 65px;
             left: 0;
-            width: 100%;
             height: 0;
             overflow: hidden;
             transition: height 0.5s ease;
+            list-style: none;
+            /* Supprimer les petits points avant chaque section */
+            padding: 0;
         }
 
         .nav-links li {
             background-color: #000;
+            margin: 0;
         }
 
         .nav-links li a {
-            font-size: 1.5rem;
             text-transform: uppercase;
             text-decoration: none;
             color: #fff;
-
             padding: 1rem;
             transition: opacity 0.5s ease;
+            font-size: medium;
         }
 
         .nav-active {
@@ -219,8 +224,6 @@
         .nav-active li {
             opacity: 1;
         }
-
-
 
         .nav-active li a {
             opacity: 1;
@@ -233,7 +236,6 @@
                 height: auto;
                 flex-direction: row;
                 justify-content: flex-end;
-
             }
 
             .nav-links li {
@@ -243,10 +245,7 @@
 
             .burger {
                 display: none;
-
             }
-
-
         }
     </style>
     <script>
@@ -298,12 +297,5 @@
 
 
 </body>
-<footer>
-    <div class="container">
-        <p>Copyright © 2023
-            <a href="https://monsite.com">Portfollio H.Dezerce</a>. Tous droits réservés.
-        </p>
-    </div>
-</footer>
 
 </html>
