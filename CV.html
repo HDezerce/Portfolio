@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accueil - Mon site</title>
+  <title>Mon CV</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     body {
@@ -130,6 +130,7 @@
       color: #000;
       text-align: center;
       margin-top: -5rem;
+      height:67.2rem;
     }
 
     .cv {
@@ -231,6 +232,18 @@
       opacity: 1;
     }
 
+    .veille {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background-color: red;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: background-color 0.3s ease-in-out;
+      margin-left: 10px;
+    }
+
     @media screen and (min-width: 1024px) {
       .nav-links {
         position: relative;
@@ -260,14 +273,29 @@
   </script>
   <main>
     <div class="container">
-      <a href="Accueil.html">
-        <img class="profile-img" src="images/photo.jpg" alt="Profile image">
-      </a>
-      <p class="animate__animated animate__fadeInUp">Mon CV :</p>
+      <h2 class="animate__animated animate__fadeInUp">Mon CV :</h2>
       <div style="background-color: #fff; margin-top: 5rem;">
   </main>
-  <iframe src="images/CV stage HDEZERCE (2) (1).pdf" width="100%" height="800px" scrolling="auto"
-    style="margin-top: -100px;"></iframe>
+  <div class="parcour">
+  <iframe id="myIframe" src="images/CV stage HDEZERCE (2) (1).pdf" width="100%" height="800px" scrolling="auto"></iframe>
+
+  <a class="veille" onclick="openFullscreen()">Plein écran</a>
+
+  <script>
+  function openFullscreen() {
+    var elem = document.getElementById("myIframe");
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
+  </script>
+  </div>
+
+
 </body>
 
 </html>

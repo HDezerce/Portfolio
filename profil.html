@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accueil - Mon site</title>
+  <title>Mon profil</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     body {
@@ -269,8 +269,9 @@
       <div style="background-color: #fff; margin-top: 5rem;">
   </main>
   <div class="parcour">
-    <p>Je suis Hugo Dezerce, j’ai 21 ans. Je suis étudiant au lycée Elie Vinet à Barbezieux en BTS SIO (service
+    <p style="padding-top: 25px;">Je suis Hugo Dezerce, j’ai 21 ans. Je suis étudiant au lycée Elie Vinet à Barbezieux en BTS SIO (service
       informatique aux organisations) dans l'option SLAM (Solutions logicielles et applications métiers).</p>
+      <hr>
     <div style="margin-top: 2rem;">
       <div class="btn-container">
 
@@ -281,8 +282,23 @@
 
       <p>Mon tableau de compétences :</p>
 
-      <iframe src="images/Tableau de synthèse - Epreuve E4 - BTS SIO 2023.xlsx - Tableau de synthèse Épreuve E4.pdf"
+      <iframe id="myIframe" src="images/Tableau de synthèse - Epreuve E4 - BTS SIO 2023.xlsx - Tableau de synthèse Épreuve E4.pdf"
       width="100%" height="800px" scrolling="auto"></iframe>
+
+      <a class="veille" onclick="openFullscreen()">Plein écran</a>
+
+<script>
+function openFullscreen() {
+  var elem = document.getElementById("myIframe");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
 
 </body>
 

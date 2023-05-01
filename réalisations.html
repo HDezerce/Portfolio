@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Accueil - Mon site</title>
+    <title>Mes réalisations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         body {
@@ -130,6 +130,7 @@
             color: #000;
             text-align: center;
             margin-top: -5rem;
+            height: 67.2rem;
         }
 
         .cv {
@@ -248,6 +249,12 @@
             .burger {
                 display: none;
             }
+
+            .imageProjet {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+                margin: 10px;
+            }
+
         }
     </style>
     <script>
@@ -260,23 +267,24 @@
     </script>
     <main>
         <div class="container">
-            <a href="Accueil.html">
-                <img class="profile-img" src="images/photo.jpg" alt="Profile image">
-            </a>
             <h2 class="animate__animated animate__fadeInUp">Mes projets réalisés</h2>
             <div style="background-color: #fff; margin-top: 5rem;">
     </main>
     <div class="parcour">
         <div class="gallery">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLr63Mbs_-oDrj-V6qZTx615ZiGPlgrpO6ZLk9XWNGVui8_jpx-uKV71EE1S6hfqQHmg&usqp=CAU"
-                style="justify-content: center;  width: 300px;
+            <img class=imageProjet src="C:\Users\hugo6\Documents\Sans titre.png" style="justify-content: center;  width: 300px;
              height: 300px;" alt="Image 1" onclick="showDescription('description1')">
-            <img src="https://isere.fff.fr/wp-content/uploads/sites/102/2017/09/2206181-611x378.jpg" style="justify-content: center;  width: 300px;
+            <img class=imageProjet src="C:\Users\hugo6\Documents\Sans titre3.png" style="justify-content: center;  width: 300px;
             height: 300px;" alt="Image 2" onclick="showDescription('description2')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFWK30F55cv_hf-nql99YU3efN6IuGJkSl82XrJbWiepHZZKZcQzjZfBRbd9KxbJr6urA&usqp=CAU" style="justify-content: center;  width: 300px; margin-top: 8px;
-            height: 300px;" alt="Image 3"
-                onclick="showDescription('description3')">
+            <img class=imageProjet src="C:\Users\hugo6\Documents\Sans titre2.png" style="justify-content: center;  width: 300px; margin-top: 8px;
+            height: 300px;" alt="Image 3" onclick="showDescription('description3')">
         </div>
+        <hr>
+        <div class="gallery2">
+            <img class=imageProjet src="C:\Users\hugo6\Documents\Sans titre4.png" style="justify-content: center;  width: 300px;
+             height: 300px;" alt="Image 4" onclick="showDescription('description4')">
+        </div>
+        <hr>
 
         <div id="description1" class="description">
             <h2>Projet PPE Clemessy</h2>
@@ -299,12 +307,21 @@
 
         <div id="description2" class="description">
             <h2>Projet PPE Formation continue</h2>
-            <p>Concevoir une maquette d'une application web permettant de saisir les fiches salariés de l'entreprise partenaire, en incluant les informations sur le nom, l'email, le code de l'entreprise, les formations envisagées et l'ID de l'employé.
-                Concevoir une maquette permettant de gérer les plannings des consultants, où les stagiaires peuvent consulter les disponibilités des consultants.
-                Concevoir une maquette permettant de gérer les sessions de formation, y compris la création, la modification et la suppression des sessions, ainsi qu'une interface pour permettre aux stagiaires de noter les formations.
-                Concevoir une maquette permettant de gérer la préparation des salles pour les sessions, en fournissant pour chaque salle les dates des sessions prévues, et permettant aux techniciens de saisir les "mémos" des opérations effectuées pour une session dans une salle.
+            <p>Concevoir une maquette d'une application web permettant de saisir les fiches salariés de l'entreprise
+                partenaire, en incluant les informations sur le nom, l'email, le code de l'entreprise, les formations
+                envisagées et l'ID de l'employé.
+                Concevoir une maquette permettant de gérer les plannings des consultants, où les stagiaires peuvent
+                consulter les disponibilités des consultants.
+                Concevoir une maquette permettant de gérer les sessions de formation, y compris la création, la
+                modification et la suppression des sessions, ainsi qu'une interface pour permettre aux stagiaires de
+                noter les formations.
+                Concevoir une maquette permettant de gérer la préparation des salles pour les sessions, en fournissant
+                pour chaque salle les dates des sessions prévues, et permettant aux techniciens de saisir les "mémos"
+                des opérations effectuées pour une session dans une salle.
                 <br><strong> Lien Gitlab du projet : <a class="animate__animated animate__fadeInUp"
-                    href="https://gitlab.lev-btssio.fr/apsymfony/formationcontinue">Projet Formation continue</a></strong></p>
+                        href="https://gitlab.lev-btssio.fr/apsymfony/formationcontinue">Projet Formation
+                        continue</a></strong>
+            </p>
             <a href="#" onclick="hideDescription('description2')">Fermer</a>
         </div>
 
@@ -312,74 +329,90 @@
             <h2>Projet les films</h2>
             <p>développer une application Android Simple afin de visualiser la liste des
                 prochains films à sortir tels que renvoyés par le site https://www.themoviedb.org/.
-                en utilisant une API JSON dans un recycler view. Afficher les cinéma avec une API de géolocalisation sur une map google Map
+                en utilisant une API JSON dans un recycler view. Afficher les cinéma avec une API de géolocalisation sur
+                une map google Map
                 <br><strong> Lien Gitlab du projet : <a class="animate__animated animate__fadeInUp"
-                    href="https://gitlab.lev-btssio.fr/hugo.dezerce/films">Projet les films</a></strong></p>
+                        href="https://gitlab.lev-btssio.fr/hugo.dezerce/films">Projet les films</a></strong>
+            </p>
             <a href="#" onclick="hideDescription('description3')">Fermer</a>
-            <style>
-                @media only screen and (max-width: 768px) {
+            </div>
 
-                    /* styles for screens up to 768px wide */
+            <div id="description4" class="description">
+                <h2>Projet site vitrine grad</h2>
+                <p>La société Grad commercialise en fourniture seule ou en fourniture et pose des terrasses
+                    bois et des aménagements extérieurs (pergolas, palissades, carports, escalier bois et garde-
+                    corps).
+                    Elle propose des produits innovants et de haute qualité.
+                    Elle vise une clientèle de particuliers mais aussi de professionnels.
+                    Vous devez créer un site web pour cette entreprise. Vous devez le réaliser en respectant les
+                    directives et les wireframes des différentes pages que vous trouverez ci-dessous
+                    Les ressources, textes et images vous sont fournis.
+                </p>
+                <a href="#" onclick="hideDescription('description4')">Fermer</a>
+                <style>
+                    @media only screen and (max-width: 768px) {
+
+                        /* styles for screens up to 768px wide */
+                        .description {
+                            font-size: 16px;
+                            overflow-y: scroll;
+                        }
+
+                        h2 {
+                            font-size: 24px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 480px) {
+
+                        /* styles for screens up to 480px wide */
+                        .description {
+                            font-size: 14px;
+                        }
+
+                        h2 {
+                            font-size: 20px;
+                        }
+                    }
+
                     .description {
-                        font-size: 16px;
-                        overflow-y: scroll;
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        color: white;
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        flex-direction: column;
+                        justify-content: space-between;
                     }
 
-                    h2 {
-                        font-size: 24px;
-                    }
-                }
-
-                @media only screen and (max-width: 480px) {
-
-                    /* styles for screens up to 480px wide */
-                    .description {
-                        font-size: 14px;
+                    .description h2,
+                    .description p {
+                        margin: 0;
                     }
 
-                    h2 {
-                        font-size: 20px;
+                    .description a {
+                        color: white;
+                        text-decoration: underline;
                     }
-                }
+                </style>
+                <script>
+                    function showDescription(id) {
+                        var description = document.getElementById(id);
+                        description.style.display = "flex";
+                    }
 
-                .description {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.8);
-                    color: white;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    flex-direction: column;
-                    justify-content: space-between;
-                }
-
-                .description h2,
-                .description p {
-                    margin: 0;
-                }
-
-                .description a {
-                    color: white;
-                    text-decoration: underline;
-                }
-            </style>
-            <script>
-                function showDescription(id) {
-                    var description = document.getElementById(id);
-                    description.style.display = "flex";
-                }
-
-                function hideDescription(id) {
-                    var description = document.getElementById(id);
-                    description.style.display = "none";
-                }
-            </script>
-        </div>
+                    function hideDescription(id) {
+                        var description = document.getElementById(id);
+                        description.style.display = "none";
+                    }
+                </script>
+            </div>
 </body>
 
 </html>
